@@ -8,8 +8,8 @@ $r = mysqli_query( $link, $q ) ;
 if ( mysqli_num_rows( $r ) > 0 )
 {
   # Display body section.
-  echo '<div class="container">
-			<div class="row">';
+  echo '<div class="container py-3">
+			<div class="row py-3">';
   while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC ))
   {
   echo '

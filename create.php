@@ -62,7 +62,7 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
 include 'include/admin_header.html';
 
 ?>
-<div class="container px-4">
+<div class="container py-4">
     <h1>Add Item</h1>
 	<form action="create.php" method="post" >
 	  <!-- input box for item name  -->
@@ -106,7 +106,7 @@ include 'include/admin_header.html';
      <input type="submit" class="btn btn-dark" value="Submit">
 	</form>
 </div>
-</div>
+
 <?php
 // Include admin footer
 include 'include/footer.html';
