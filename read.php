@@ -8,15 +8,15 @@ $r = mysqli_query( $link, $q ) ;
 if ( mysqli_num_rows( $r ) > 0 )
 {
   # Display body section.
-  echo '<div class="container py-3">
-			<div class="row py-3">';
+  echo '<div class="container p-3">
+			<div class="row p-3">';
   while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC ))
   {
   echo '
   <div class="col-md-3 d-flex justify-content-center">
 	 <div class="card" style="width: 18rem;">
 	  <img src='. $row['item_img'].' class="card-img-top" alt="Silver-Watch">
-		<div class="card-py-3-body">
+		<div class="card-p-3-body">
 		 <h5 class="card-title text-center">' . $row['item_name'] .'</h5>
 		 <p class="card-text">'. $row['item_desc'] . '</p>
 		</div>
@@ -34,8 +34,4 @@ if ( mysqli_num_rows( $r ) > 0 )
 }
 # Or display message.
 else { echo '<p>There are currently no items in this table.</p>' ; }
-
-// Include admin footer
-include 'include/footer.html';
 ?>
- 

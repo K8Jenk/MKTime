@@ -6,7 +6,7 @@ require ( 'include/dbconnect.php' ) ;
 if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
 {
   # Connect to the database.
-  require ('connect_db.php'); 
+  require ('include/dbconnect.php'); 
   
   
   # Initialize an error array.
@@ -43,7 +43,7 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
   { $p = mysqli_real_escape_string( $link, trim( $_POST[ 'item_price' ] ) ) ; }
  if ( empty( $errors ) ) 
   {
-    $q = "UPDATE products SET item_id='$id',item_name='$n', item_desc='$d', item_img='$img', item_price='$p'  WHERE item_id='$id'";
+    $q = "UPDATE product SET item_id='$id',item_name='$n', item_desc='$d', item_img='$img', item_price='$p'  WHERE item_id='$id'";
     $r = @mysqli_query ( $link, $q ) ;
     if ($r)
     {
@@ -74,7 +74,7 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
 }
 ?>
 
-<div class="container px-4">
+<div class="container py-4">
     <h1>Update Item</h1>
 <form action="update.php" method="post">
 <div class="form-group">
@@ -100,18 +100,5 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
   <input type="submit" class="btn btn-dark" value="Update Record"></p>
 </form><!-- closing form -->
 	<br>
-		<!--<a href="create.php">Add Records</a>  |  <a href="read_table.php">Read Records</a>  |  <a href="update_record.php">Update Record</a>  | <a href="delete_record.php">Delete Record</a>
-  <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-    
   </body>
 </html>
-
-<?php
-// Include admin footer
-include 'include/footer.html';
-?>

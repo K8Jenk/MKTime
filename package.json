@@ -1,0 +1,23 @@
+{
+  "name": "mktime",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K8Jenk/MKTime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/K8Jenk/MKTime/issues"
+  },
+  "homepage": "https://github.com/K8Jenk/MKTime#readme",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.5.0"
+  }
+}
